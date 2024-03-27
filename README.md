@@ -33,7 +33,7 @@
 - 모델 평가 및 적용에 필요한 인력 및 시간 비용
 
 ## 참고 문헌
-- [보안 인공지능을 위한 딥러닝 알고리즘 연구](https://www.kisa.or.kr/eng/usefulreport/policyReport_View.jsp?cPage=1&mode=view&p_No=308&b_No=308&d_No=28&ST1=ST2&IDX=&curmax=10&ST1=ST2&ST1=ST2)
-- [실시간 해킹 감지 시스템 구축을 위한 연구](https://www.sans.org/reading-room/whitepapers/detection/real-time-hacking-detection-system-34255)
+- [인공지능과 빅데이터 분석 기반 통합보안관제시스템 구축방안에 관한 연구](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE09322343)
+- [인공지능 기술 활용을 위한 사이버 국방 정보보호 시스템 분석](http://journal.dcs.or.kr/xml/24183/24183.pdf)
 
 ---
