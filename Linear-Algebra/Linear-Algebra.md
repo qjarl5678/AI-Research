@@ -80,9 +80,9 @@ linear combination은 어떤 벡터들에 스칼라배를 하고 그것을 더�
 즉 선형결합은 주어진 벡터들이 span 할 수 있는 모든 점의 집합을 기하학적으로 나타낸다고 볼 수 있습니다.
 
 ### linearly independent 확인 (독립 종속 확인법)
-양변에 상수를 각각 곱해줬을때 0이 나오는 0이 아닌 알파와 베타가 존재 하는지로 판별 가능
-ax + by = 0
-0이 아닌 알파와 베타가 존재한다면 종속(dependent)이다.
+
+선형독립이란 벡터들의 선형결합으로 영벡터(Zero vector, 0)를 만드는 유일한 방법은 모든 계수가 0인 경우 뿐이라는 것.
+
 linearly independent를 통해 몇 차원을 span 할 수 있는지 확인할 수 있음.
 
 ### basis (기저)
@@ -105,3 +105,73 @@ A = [a,b,c,d] 일때 detA = ad-bc
 만약 0이 아닌 경우라면 그 행렬은 linearly independent 하며 역행렬이 존재한다는 것을 알 수 있습니다.
 2x2 행렬식 = 평행사변형의 넓이 
 3x3 행렬식 = 평행육면체의 부피
+
+
+
+---
+
+1. **정의를 사용한 확인**
+
+주어진 벡터 \( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \)에 대해 다음 방정식을 풉니다:
+
+$$
+c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \dots + c_n \mathbf{v}_n = \mathbf{0}
+$$
+
+- 이 방정식에서 \( c_1 = c_2 = \dots = c_n = 0 \)이라는 **유일한 해**만 존재하면, 벡터들은 선형독립입니다.
+- 반대로, \( c_1, c_2, \dots, c_n \) 중 하나 이상이 0이 아닌 해가 존재하면, 벡터들은 선형종속입니다.
+
+---
+
+2. **행렬을 이용한 확인**
+
+벡터들을 행렬의 열벡터로 배열하여 계산합니다:
+
+$$
+A = \begin{bmatrix} \mathbf{v}_1 & \mathbf{v}_2 & \dots & \mathbf{v}_n \end{bmatrix}
+$$
+
+1. **행렬의 계수(rank)**:
+    - 행렬 \( A \)의 열벡터의 계수(랭크)가 벡터의 개수 \( n \)과 같으면 선형독립입니다.
+    - 계수가 \( n \)보다 작으면 선형종속입니다.
+
+2. **행렬식(determinant) 활용** (정사각행렬인 경우):
+    - 만약 \( n \)개의 벡터가 \( n \)-차원 공간에 있다면, 행렬 \( A \)의 행렬식을 계산합니다:
+    
+    $$
+    \text{det}(A) \neq 0 \implies \text{선형독립}, \quad \text{det}(A) = 0 \implies \text{선형종속}.
+    $$
+
+---
+
+### 예제:
+
+1. **벡터 집합 확인**
+
+방정식:
+$$
+c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 = \mathbf{0}
+$$
+
+이를 풀면:
+$$
+c_1 \begin{bmatrix} 1 \\ 2 \end{bmatrix} + c_2 \begin{bmatrix} 2 \\ 4 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+$$
+
+즉,
+$$
+\begin{bmatrix} c_1 + 2c_2 \\ 2c_1 + 4c_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+$$
+
+2. **행렬을 사용한 확인**
+:
+$$
+A = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+$$
+
+행렬식:
+$$
+\text{det}(A) = (1)(1) - (0)(0) = 1 \neq 0
+$$
+
+따라서, **선형독립**입니다.
